@@ -1,56 +1,52 @@
 module.exports = {
-    title: '春江花月夜',
-    description: 'maki maki的知识仓库',
-
+    title: '知识',
+    description: '春江花月夜的知识仓库',
+    base: '/Prebook/',
     head: [
-      ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+        ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
     ],
-    base: '/myknowledge', 
     markdown: {
-      lineNumbers: true // 代码块显示行号
+        lineNumbers: true // 代码块显示行号
     },
     themeConfig: {
-      sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
-      lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
-      nav:[
-        { text: '前端算法', link: '/algorithm/' }, // 内部链接 以docs为根目录
-        { text: '博客', link: 'http://obkoro1.com/' }, // 外部链接
-        // 下拉列表
-        {
-          text: 'GitHub',
-          items: [
-            { text: 'GitHub地址', link: 'https://github.com/OBKoro1' },
+
+        lastUpdated: '最后更新时间',
+        // 2.设置true，开启最后更新时间
+        lastUpdated: true,
+        nav: [
+            { text: '前端', link: 'https://cjhyy.github.io/Prebook/' },
             {
-              text: '算法仓库',
-              link: 'https://github.com/OBKoro1/Brush_algorithm'
-            }
-          ]
-        }        
-      ],
-      sidebar:{
-        // docs文件夹下面的accumulate文件夹 文档中md文件 书写的位置(命名随意)
-        '/accumulate/': [
-            '/accumulate/', // accumulate文件夹的README.md 不是下拉框形式
+                text: '算法',
+                items: [
+                    { text: '算法与数据结构', link: 'https://github.com/cjhyy' },
+                    { text: 'leetcode题解', link: 'https://cjhyy.github.io/myleetcode/' }
+                ]
+            },
+
             {
-              title: '侧边栏下拉框的标题1',
-              children: [
-                '/accumulate/JS/test', // 以docs为根目录来查找文件 
-                // 上面地址查找的是：docs>accumulate>JS>test.md 文件
-                // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
-              ]
-            }
-          ],
-          // docs文件夹下面的algorithm文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
-          '/algorithm/': [
-            '/algorithm/', 
-            {
-              title: '第二组侧边栏下拉框的标题1',
-              children: [
-                '/algorithm/simple/test' 
-              ]
-            }
-          ]
-      }
+                text: '学习笔记',
+                items: [
+                    { text: '数学', link: 'https://github.com/cjhyy' },
+                    {
+                        text: '计算机',
+                        link: 'https://github.com/cjhyy'
+                    },
+                    {
+                        text: '英语',
+                        link: 'https://github.com/cjhyy'
+                    },
+                    {
+                        text: '日语',
+                        link: 'https://github.com/cjhyy'
+                    },
+                    {
+                        text: '其他',
+                        link: 'https://github.com/cjhyy'
+                    },
+                ]
+            },
+            { text: 'Github', link: 'https://github.com/cjhyy' },
+        ]
 
 
 
