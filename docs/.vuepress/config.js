@@ -1,7 +1,7 @@
 module.exports = {
     title: '知识',
     description: '春江花月夜的知识仓库',
-    base: '/Prebook/',
+    base: '/myknowledge/',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
     ],
